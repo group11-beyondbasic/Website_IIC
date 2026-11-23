@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beyond Basic: English &amp; Speaking Lab | Group 11</title>
+  <meta name="description" content="Speaking, vocabulary and conversation practice by Group 11. Cloud version with email login." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beyond Basic: English & Speaking Lab | Group 11" />
+  <meta property="og:description" content="Speaking, vocabulary and conversation practice by Group 11. Cloud version with email login." />
+  <meta property="og:url" content="https://beyondbasic-group11.github.io/Web_IIC/" />
+  <meta property="og:image" content="https://beyondbasic-group11.github.io/Web_IIC/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function () {
       try {
@@ -15,7 +24,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=16" />
+  <link rel="stylesheet" href="style.css?v=41" />
+  <link rel="stylesheet" href="style-bold.css?v=8" id="boldStyles" />
 </head>
 <body class="logged-out">
   <!-- ==================== TOP NAVBAR ==================== -->
@@ -35,7 +45,8 @@
         <button class="nav-tab" data-nav="words">WORDS</button>
         <button class="nav-tab" data-nav="units">UNITS</button>
         <button class="nav-tab" data-nav="idioms">IDIOMS</button>
-        <button class="nav-tab" data-nav="stories">STORIES</button>
+        <button class="nav-tab" data-nav="ai">AI</button>
+        <button class="nav-tab" data-nav="tips">TIPS</button>
         <button class="nav-tab" data-nav="quiz">QUIZ</button>
       </nav>
 
@@ -70,7 +81,7 @@
         </div>
 
         <div class="os-window auth-card">
-          <div class="auth-card-head">SIGN IN</div>
+          <div class="auth-card-head">SIGN IN · LOCAL VERSION</div>
           <div class="auth-card-body">
             <h2 class="auth-card-title">Get started</h2>
             <p class="login-sub">Enter your name and email. We will send you a sign-in link.</p>
@@ -85,15 +96,9 @@
               </label>
               <p id="loginError" class="login-error" role="alert"></p>
               <p id="loginMessage" class="login-msg" role="status"></p>
-              <button type="submit" class="brutal-btn bg-yellow auth-submit">SEND SIGN-IN LINK →</button>
+              <button type="submit" class="brutal-btn bg-yellow auth-submit">START →</button>
             </form>
-
-            <div id="loginDivider" class="login-divider"><span>OR</span></div>
-            <button id="googleLoginBtn" type="button" class="brutal-btn login-google">
-              <svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.4h6.5c-.3 1.5-1.1 2.7-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.7z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.5 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1C3.4 21.3 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.4 14.4c-.2-.7-.4-1.5-.4-2.4s.1-1.6.4-2.4V6.5H1.4C.5 8.2 0 10 0 12s.5 3.8 1.4 5.5l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.7 0 3.3.6 4.5 1.8l3.4-3.4C17.9 1.2 15.2 0 12 0 7.4 0 3.4 2.7 1.4 6.5l4 3.1C6.3 6.9 8.9 4.8 12 4.8z"/></svg>
-              CONTINUE WITH GOOGLE
-            </button>
-            <p class="login-note">No password needed. Your progress is saved to your account, so you can use any device.</p>
+            <p class="login-note"><strong>Local version:</strong> your progress is saved only in the browser on this device. It will be lost if you clear your browser data or cache.</p>
           </div>
         </div>
       </div>
@@ -102,6 +107,8 @@
     <section id="page-home" class="page" aria-labelledby="hero-headline">
       <div class="hero-layout">
         <div class="poster-block">
+          <div class="deco deco-star deco-star-hero" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 L62 38 L96 50 L62 62 L50 96 L38 62 L4 50 L38 38 Z" /></svg></div>
+          <div class="deco deco-zig deco-zig-hero" aria-hidden="true"><svg viewBox="0 0 160 40" aria-hidden="true"><polyline points="4,30 20,8 36,30 52,8 68,30 84,8 100,30 116,8 132,30 148,8" /></svg></div>
           <div class="poster-meta-top">
             <span class="tag-pill bg-yellow">GROUP 11 · ENGLISH LAB</span>
           </div>
@@ -163,6 +170,7 @@
             </div>
             <h2 id="spotlightWord" class="wotd-display">PETRICHOR</h2>
             <p id="spotlightDef" class="wotd-definition"></p>
+            <p id="spotlightExample" class="wotd-example"></p>
             <div class="upgrade-box">
               <div id="spotlightOld" class="upgrade-old"></div>
               <div id="spotlightNew" class="upgrade-new"></div>
@@ -459,7 +467,7 @@
       </div>
 
       <div class="filter-pills" id="idiomCategoryPills">
-        <button class="cat-pill active" data-icat="All">ALL (16)</button>
+        <button class="cat-pill active" data-icat="All">ALL (42)</button>
         <button class="cat-pill" data-icat="Emotion & Mind">EMOTION</button>
         <button class="cat-pill" data-icat="Nature & Atmosphere">NATURE</button>
         <button class="cat-pill" data-icat="Character & Style">CHARACTER</button>
@@ -496,65 +504,6 @@
     </section>
 
     <!-- ==================== PAGE 04: SHORT STORIES ==================== -->
-    <section id="page-stories" class="page" aria-labelledby="stories-heading">
-      <div class="page-top-banner">
-        <div>
-          <span class="tag-pill bg-lilac">CONTEXT READING</span>
-          <h1 id="stories-heading" class="page-headline">SHORT STORIES</h1>
-        </div>
-        <p class="banner-note">
-          Tap any <span class="demo-chip bg-yellow">COLORED WORD</span> to see its meaning, origin, and audio.
-        </p>
-      </div>
-
-      <div class="story-tabs" id="storyTabs" role="tablist"></div>
-
-      <article class="os-window story-window">
-        <div class="os-titlebar bg-lilac">
-          <div class="os-dots"><span></span><span></span><span></span></div>
-          <span id="storyWindowFile" class="os-title">STORY 01</span>
-          <span id="storyReadTime" class="os-title">1 MIN READ</span>
-        </div>
-
-        <div class="os-body story-content-pad">
-          <div class="story-controls-bar">
-            <span id="storyTag" class="tag-pill bg-yellow">TRAVEL</span>
-            <div class="story-btn-group">
-              <button id="fontDecreaseBtn" class="brutal-btn-sm" title="Smaller Text">A-</button>
-              <button id="fontIncreaseBtn" class="brutal-btn-sm" title="Larger Text">A+</button>
-              <button id="readStoryAloudBtn" class="brutal-btn-sm bg-sky">
-                <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                READ ALOUD
-              </button>
-            </div>
-          </div>
-
-          <h2 id="storyTitle" class="story-headline"></h2>
-          <p id="storyAuthor" class="story-byline"></p>
-
-          <div id="storyBody" class="story-paragraphs"></div>
-
-          <div class="reflection-panel" style="margin-top: 22px;">
-            <div class="practice-header-row">
-              <strong class="inline-icon-label">
-                <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-                TRY IT:
-              </strong>
-              <span id="storyPrompt" class="prompt-inline"></span>
-            </div>
-            <div class="inline-practice-row">
-              <input
-                type="text"
-                id="reflectionInput"
-                placeholder="Write 1 sentence using a highlighted word..."
-              />
-              <button id="saveReflectionBtn" class="brutal-btn-sm bg-mint">SAVE</button>
-            </div>
-            <span id="reflectionSavedMsg" class="saved-status"></span>
-          </div>
-        </div>
-      </article>
-    </section>
 
     <!-- ==================== PAGE 05: QUIZ ==================== -->
     <section id="page-quiz" class="page" aria-labelledby="quiz-heading">
@@ -628,6 +577,138 @@
         </div>
       </div>
     </section>
+    <section id="page-tips" class="page" aria-labelledby="tips-heading">
+      <div class="page-top-banner">
+        <div>
+          <span class="tag-pill bg-yellow">SPEAKING</span>
+          <h1 id="tips-heading" class="page-headline">TIPS FOR SPEAKING</h1>
+          <p class="page-lead">Small habits that help you speak English more confidently. Start with one tip this week.</p>
+        </div>
+      </div>
+      <div class="tips-grid">
+        <article class="os-window tip-card">
+          <span class="tag-pill bg-mint">01</span>
+          <h2 class="tip-title">Speak every day, even for 10 minutes</h2>
+          <p class="tip-body">Consistency matters more than length. Pick one topic each day and talk about it out loud for 10 minutes, alone or with a friend.</p>
+        </article>
+        <article class="os-window tip-card">
+          <span class="tag-pill bg-mint">02</span>
+          <h2 class="tip-title">Learn phrases, not single words</h2>
+          <p class="tip-body">Memorize chunks like 'I see your point, although...' or 'Would you mind...?'. They come out faster in real conversation than isolated vocabulary.</p>
+        </article>
+        <article class="os-window tip-card">
+          <span class="tag-pill bg-mint">03</span>
+          <h2 class="tip-title">Shadow a native speaker</h2>
+          <p class="tip-body">Play a short clip, then repeat it right after the speaker, copying rhythm, stress, and intonation. Stop and replay whenever you lose the pace.</p>
+        </article>
+        <article class="os-window tip-card">
+          <span class="tag-pill bg-mint">04</span>
+          <h2 class="tip-title">Record yourself and listen back</h2>
+          <p class="tip-body">Use your phone to record a 1-minute answer. Listen once for pronunciation and once for grammar. Most people notice their habits this way for the first time.</p>
+        </article>
+        <article class="os-window tip-card">
+          <span class="tag-pill bg-mint">05</span>
+          <h2 class="tip-title">Think in English for a few minutes</h2>
+          <p class="tip-body">Describe your room, your meal, or your plans in English in your head. This builds the habit of thinking in English before you need to speak.</p>
+        </article>
+        <article class="os-window tip-card">
+          <span class="tag-pill bg-mint">06</span>
+          <h2 class="tip-title">Use fillers and bridge phrases</h2>
+          <p class="tip-body">Words like 'Well,' 'Actually,' or 'Let me think...' buy you time. Silence feels longer to you than it does to the listener.</p>
+        </article>
+        <article class="os-window tip-card">
+          <span class="tag-pill bg-mint">07</span>
+          <h2 class="tip-title">Ask when you do not understand</h2>
+          <p class="tip-body">'Could you say that again?' and 'Do you mean...?' are normal in English conversation. Asking keeps the talk going instead of stopping it.</p>
+        </article>
+        <article class="os-window tip-card">
+          <span class="tag-pill bg-mint">08</span>
+          <h2 class="tip-title">Focus on being understood, not perfect</h2>
+          <p class="tip-body">Clear stress on key words matters more than perfect grammar. Slow down a little, and pause between ideas so the listener can follow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="page-ai" class="page" aria-labelledby="ai-heading">
+      <div class="page-top-banner">
+        <div>
+          <span class="tag-pill bg-sky">AI TOOLS</span>
+          <h1 id="ai-heading" class="page-headline">My Experience with AI Apps</h1>
+          <p class="page-lead">Notes after two weeks of practice with three apps.</p>
+        </div>
+      </div>
+      <div class="tips-grid">
+        <article class="os-window tip-card ai-app-card">
+          <span class="tag-pill bg-sky">SMALLTALK2ME</span>
+          <p class="ai-line"><strong>Used for:</strong> Speaking tests and structured practice.</p>
+          <p class="tip-body">I recorded my answers and the app gave feedback on pronunciation, fluency, grammar and vocabulary. The job interview and IELTS-style practice made me feel ready for real tests.</p>
+          <p class="ai-line"><strong>Good:</strong> Clear feedback after every answer, plus a level test.</p>
+          <p class="ai-line"><strong>Watch out:</strong> Some features need a paid plan, so check what is free.</p>
+          <p class="ai-line"><strong>Best for:</strong> Tests and interviews.</p>
+        </article>
+        <article class="os-window tip-card ai-app-card">
+          <span class="tag-pill bg-mint">CHATGPT</span>
+          <p class="ai-line"><strong>Used for:</strong> Free conversation and role-play.</p>
+          <p class="tip-body">I asked it to act as a waiter, a teacher and an interviewer. With voice mode I could talk about any topic, and it explained my mistakes in simple words.</p>
+          <p class="ai-line"><strong>Good:</strong> Any topic, any level, detailed corrections.</p>
+          <p class="ai-line"><strong>Watch out:</strong> It can be too polite, so ask it to correct every mistake.</p>
+          <p class="ai-line"><strong>Best for:</strong> Flexible conversation.</p>
+        </article>
+        <article class="os-window tip-card ai-app-card">
+          <span class="tag-pill bg-lilac">PI (PI.AI)</span>
+          <p class="ai-line"><strong>Used for:</strong> Friendly everyday chat.</p>
+          <p class="tip-body">Pi feels like talking to a kind friend. It asks short questions and listens, so I relaxed and spoke longer. I chose a voice I liked and chatted while walking.</p>
+          <p class="ai-line"><strong>Good:</strong> Warm, natural, low pressure.</p>
+          <p class="ai-line"><strong>Watch out:</strong> It corrects grammar less than the others, so ask for corrections.</p>
+          <p class="ai-line"><strong>Best for:</strong> Confidence and small talk.</p>
+        </article>
+        </div>
+        <article class="os-window tip-card ai-summary">
+          <span class="tag-pill bg-yellow">WHAT I LEARNED</span>
+          <p class="tip-body">Each app has a different job. Smalltalk2Me tests me, ChatGPT teaches me, and Pi helps me relax and keep talking. The progress came from speaking out loud every day.</p>
+        </article>
+      <div class="ai-tutorials">
+        <h2 class="ai-heading">Tutorials</h2>
+        <div class="tips-grid">
+        <article class="os-window tip-card tutorial-card">
+          <h3 class="tutorial-title">Tutorial 1: Smalltalk2Me (speaking practice with feedback)</h3>
+          <ol class="tutorial-steps">
+            <li>Go to smalltalk2.me in your browser and create a free account.</li>
+            <li>Choose a practice type, such as the level test, a job interview, or an IELTS speaking simulator.</li>
+            <li>Allow the microphone when your browser asks, and sit in a quiet place.</li>
+            <li>Read the question, then press record and answer out loud.</li>
+            <li>Read the feedback on pronunciation, fluency, grammar and vocabulary, then try the same question again.</li>
+          </ol>
+        </article>
+        <article class="os-window tip-card tutorial-card">
+          <h3 class="tutorial-title">Tutorial 2: ChatGPT (conversation and role-play)</h3>
+          <ol class="tutorial-steps">
+            <li>Open chatgpt.com or the ChatGPT app and sign in.</li>
+            <li>Copy the prompt below and paste it into a new chat.</li>
+            <li>Tap the microphone or voice icon to speak, or type your answers.</li>
+            <li>Read each correction, then say the corrected sentence out loud.</li>
+            <li>At the end, ask: "Give me a summary of my five most common mistakes."</li>
+          </ol>
+        </article>
+        <article class="os-window tip-card tutorial-card">
+          <h3 class="tutorial-title">Tutorial 3: Pi (relaxed everyday chat)</h3>
+          <ol class="tutorial-steps">
+            <li>Go to pi.ai or open the Pi app and start a chat.</li>
+            <li>Choose a voice you like in the voice settings and tap the voice or call button.</li>
+            <li>Start simple: "Hi Pi, let's talk about my day."</li>
+            <li>Keep talking for five minutes, even if you make mistakes.</li>
+            <li>Finish by saying: "Please tell me three mistakes I made and how to fix them."</li>
+          </ol>
+        </article>
+        <article class="os-window tip-card tutorial-card">
+          <h3 class="tutorial-title">Prompt to copy (ChatGPT)</h3>
+          <pre class="prompt-text" id="promptText">You are my friendly English speaking partner. My level is intermediate. Talk with me about everyday topics, one short question at a time. After each of my answers, correct my mistakes, show the corrected sentence, and explain the rule in one line. Then ask a follow-up question.</pre>
+          <button type="button" class="brutal-btn-sm bg-sky" id="copyPromptBtn">COPY PROMPT</button>
+        </article>
+        </div>
+      </div>
+    </section>
+
     <section id="page-profile" class="page" aria-labelledby="profile-heading">
       <div class="page-top-banner">
         <div>
@@ -665,9 +746,8 @@
     <button class="dock-btn" data-nav="idioms">
       <span class="dock-txt">IDIOMS</span>
     </button>
-    <button class="dock-btn" data-nav="stories">
-      <span class="dock-txt">STORY</span>
-    </button>
+    <button class="dock-btn" data-nav="ai">AI</button>
+    <button class="dock-btn" data-nav="tips">TIPS</button>
     <button class="dock-btn" data-nav="quiz">
       <span class="dock-txt">QUIZ</span>
     </button>
@@ -706,7 +786,6 @@
   <!-- Toast -->
   <div id="toast" class="brutal-toast" role="status" aria-live="polite"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="script.js?v=16"></script>
+  <script src="script.js?v=33"></script>
 </body>
 </html>

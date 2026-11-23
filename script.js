@@ -2,6 +2,11 @@
    BEYOND BASIC — Colorful Neo-Brutalist & Scannable English Lab (Group 11)
    ========================================================================== */
 
+// BOLD is the only visual style now
+function setupStyleToggle() {
+  document.body.classList.add("bold-on");
+}
+
 // Restart a short CSS animation class on an element
 function playAnim(el, cls) {
   if (!el) return;
@@ -2163,6 +2168,214 @@ const IDIOMS_DATA = [
     "category": "Emotion & Mind",
     "meaning": "Stay positive and cheerful during a difficult time.",
     "example": "Keep your chin up, the results will come soon."
+  },
+  {
+    "idiom": "A storm in a teacup",
+    "tag": "WEATHER",
+    "color": "bg-sky",
+    "category": "Nature & Atmosphere",
+    "meaning": "A lot of worry about something unimportant.",
+    "example": "The argument over the parking spot was a storm in a teacup."
+  },
+  {
+    "idiom": "Make hay while the sun shines",
+    "tag": "OPPORTUNITY",
+    "color": "bg-mint",
+    "category": "Nature & Atmosphere",
+    "meaning": "Use a good opportunity while it lasts.",
+    "example": "The sun is out, so we should make hay while the sun shines and finish the report now."
+  },
+  {
+    "idiom": "Come rain or shine",
+    "tag": "ALWAYS",
+    "color": "bg-yellow",
+    "category": "Nature & Atmosphere",
+    "meaning": "Regardless of the situation, no matter what happens.",
+    "example": "Our study group meets every Friday, come rain or shine."
+  },
+  {
+    "idiom": "The calm before the storm",
+    "tag": "QUIET",
+    "color": "bg-lilac",
+    "category": "Nature & Atmosphere",
+    "meaning": "A quiet period before a difficult or busy time.",
+    "example": "The office was quiet, the calm before the storm of the exam week."
+  },
+  {
+    "idiom": "Out of the blue",
+    "tag": "SURPRISE",
+    "color": "bg-peach",
+    "category": "Nature & Atmosphere",
+    "meaning": "Suddenly and unexpectedly.",
+    "example": "She called me out of the blue after five years."
+  },
+  {
+    "idiom": "Head in the clouds",
+    "tag": "DREAMY",
+    "color": "bg-coral",
+    "category": "Nature & Atmosphere",
+    "meaning": "Not paying attention to practical things, daydreaming.",
+    "example": "He has his head in the clouds and forgot the deadline again."
+  },
+  {
+    "idiom": "Go with the flow",
+    "tag": "RELAX",
+    "color": "bg-mint",
+    "category": "Nature & Atmosphere",
+    "meaning": "Relax and accept what happens, without fighting it.",
+    "example": "Our plan changed twice, but we just went with the flow."
+  },
+  {
+    "idiom": "The snowball effect",
+    "tag": "GROWTH",
+    "color": "bg-sky",
+    "category": "Nature & Atmosphere",
+    "meaning": "A small thing that grows bigger and bigger over time.",
+    "example": "One small idea led to a snowball effect of new projects."
+  },
+  {
+    "idiom": "Over the moon",
+    "tag": "HAPPY",
+    "color": "bg-yellow",
+    "category": "Emotion & Mind",
+    "meaning": "Extremely happy and pleased.",
+    "example": "She was over the moon when she passed the exam."
+  },
+  {
+    "idiom": "Down in the dumps",
+    "tag": "SAD",
+    "color": "bg-lilac",
+    "category": "Emotion & Mind",
+    "meaning": "Feeling sad or unhappy.",
+    "example": "He has been down in the dumps since his team lost."
+  },
+  {
+    "idiom": "Hold your horses",
+    "tag": "PATIENCE",
+    "color": "bg-peach",
+    "category": "Emotion & Mind",
+    "meaning": "Wait a moment, do not rush.",
+    "example": "Hold your horses, I have not finished my sentence yet."
+  },
+  {
+    "idiom": "Lose your temper",
+    "tag": "ANGER",
+    "color": "bg-coral",
+    "category": "Emotion & Mind",
+    "meaning": "Suddenly become very angry.",
+    "example": "He lost his temper when the printer broke again."
+  },
+  {
+    "idiom": "Get cold feet",
+    "tag": "NERVOUS",
+    "color": "bg-sky",
+    "category": "Emotion & Mind",
+    "meaning": "Suddenly become too nervous to do something you planned.",
+    "example": "I wanted to present, but I got cold feet at the last minute."
+  },
+  {
+    "idiom": "Feel blue",
+    "tag": "SAD",
+    "color": "bg-mint",
+    "category": "Emotion & Mind",
+    "meaning": "Feel sad or depressed for a while.",
+    "example": "She felt blue after the long rainy week."
+  },
+  {
+    "idiom": "Hit the nail on the head",
+    "tag": "ACCURATE",
+    "color": "bg-sky",
+    "category": "Character & Style",
+    "meaning": "Say or do exactly the right thing.",
+    "example": "You hit the nail on the head with that comment."
+  },
+  {
+    "idiom": "Beat around the bush",
+    "tag": "DIRECT",
+    "color": "bg-coral",
+    "category": "Character & Style",
+    "meaning": "Avoid talking about the main point directly.",
+    "example": "Stop beating around the bush and tell me what happened."
+  },
+  {
+    "idiom": "Bite off more than you can chew",
+    "tag": "BUSY",
+    "color": "bg-peach",
+    "category": "Character & Style",
+    "meaning": "Take on more work than you can manage.",
+    "example": "I bit off more than I could chew with three projects."
+  },
+  {
+    "idiom": "Cut corners",
+    "tag": "CARELESS",
+    "color": "bg-lilac",
+    "category": "Character & Style",
+    "meaning": "Do something cheaply or carelessly to save time or money.",
+    "example": "The team cut corners and the slides looked messy."
+  },
+  {
+    "idiom": "Keep an open mind",
+    "tag": "OPEN",
+    "color": "bg-mint",
+    "category": "Character & Style",
+    "meaning": "Be willing to consider new ideas.",
+    "example": "Keep an open mind when you hear a different opinion."
+  },
+  {
+    "idiom": "Show your true colors",
+    "tag": "HONEST",
+    "color": "bg-yellow",
+    "category": "Character & Style",
+    "meaning": "Reveal your real character or opinion.",
+    "example": "Under pressure, he showed his true colors and helped everyone."
+  },
+  {
+    "idiom": "Time flies",
+    "tag": "FAST",
+    "color": "bg-yellow",
+    "category": "Time & Society",
+    "meaning": "Time passes very quickly.",
+    "example": "Time flies when you are having fun with friends."
+  },
+  {
+    "idiom": "Better late than never",
+    "tag": "LATE",
+    "color": "bg-lilac",
+    "category": "Time & Society",
+    "meaning": "Doing something late is better than not doing it at all.",
+    "example": "I sent my thank-you note a week late, but better late than never."
+  },
+  {
+    "idiom": "At the eleventh hour",
+    "tag": "DEADLINE",
+    "color": "bg-coral",
+    "category": "Time & Society",
+    "meaning": "At the very last possible moment.",
+    "example": "She submitted the essay at the eleventh hour."
+  },
+  {
+    "idiom": "Take your time",
+    "tag": "PATIENCE",
+    "color": "bg-sky",
+    "category": "Time & Society",
+    "meaning": "Do not hurry, there is no rush.",
+    "example": "Take your time reading the instructions."
+  },
+  {
+    "idiom": "Get the ball rolling",
+    "tag": "START",
+    "color": "bg-mint",
+    "category": "Time & Society",
+    "meaning": "Start an activity or process.",
+    "example": "Let us get the ball rolling with the first slide."
+  },
+  {
+    "idiom": "Hit the road",
+    "tag": "LEAVE",
+    "color": "bg-peach",
+    "category": "Time & Society",
+    "meaning": "Start a journey or leave.",
+    "example": "We should hit the road before the traffic gets worse."
   }
 ];
 
@@ -2229,7 +2442,85 @@ const STORIES_DATA = [
       "Escaping a sudden downpour, I stepped into the {quintessential} second-hand bookshop behind campus. Inside a worn novel, a 1998 postcard slipped out. It was pure {serendipity}.",
       "Reading that tiny note sparked a warm wave of {nostalgia}, turning an {ephemeral} rainstorm into my favorite memory of the week."
     ]
-  }
+  },
+  {
+    id: "story-5",
+    tabTitle: "05. COFFEE BREAK",
+    title: "The Coffee Break Nobody Planned",
+    author: "DINA // CAMPUS LIFE",
+    tag: "CAMPUS",
+    readTime: "1 MIN READ",
+    prompt: "Write 1 sentence using 'gregarious', 'punctual', or 'impromptu'.",
+    paragraphs: [
+      "Our group meeting was supposed to start at nine, but Rafi arrived late and looked worried. Within minutes, a {gregarious} classmate started talking to everyone at the table, and the mood changed completely.",
+      "We ended up with an {impromptu} study session in the cafeteria. Even though we were not {punctual} at first, we finished the slides before lunch."
+    ]
+  },
+  {
+    id: "story-6",
+    tabTitle: "06. LAST MINUTE",
+    title: "The Assignment Due Tomorrow",
+    author: "ARYA // STUDY DIARY",
+    tag: "STUDY",
+    readTime: "1 MIN READ",
+    prompt: "Write 1 sentence using 'procrastinate', 'tenacious', or 'meticulous'.",
+    paragraphs: [
+      "I wanted to start my essay last week, but I kept choosing to {procrastinate} and watch videos instead. Tonight, with the deadline tomorrow, I finally sat down and began to write.",
+      "I was {tenacious} about finishing. I checked every sentence in a {meticulous} way, and by midnight the draft was complete and clear."
+    ]
+  },
+  {
+    id: "story-7",
+    tabTitle: "07. RAINY MORNING",
+    title: "Rain on the Market Road",
+    author: "NADIA // WEATHER NOTE",
+    tag: "NATURE",
+    readTime: "1 MIN READ",
+    prompt: "Write 1 sentence using 'torrential', 'verdant', or 'tranquil'.",
+    paragraphs: [
+      "The sky turned dark before sunrise, and a {torrential} rain fell on the market road. The vendors covered their stalls, and the street quickly became a river.",
+      "When the rain stopped, the hills looked {verdant} and fresh. For a few minutes, the air felt {tranquil}, and everyone stood still to enjoy the quiet."
+    ]
+  },
+  {
+    id: "story-8",
+    tabTitle: "08. JOB INTERVIEW",
+    title: "A Small Interview Surprise",
+    author: "RAFI // CAREER TALK",
+    tag: "CAREER",
+    readTime: "1 MIN READ",
+    prompt: "Write 1 sentence using 'articulate', 'candid', or 'resourceful'.",
+    paragraphs: [
+      "The interviewer asked about a project that had failed. I could have made excuses, but I decided to be {candid} and explain what I learned from the mistake.",
+      "She smiled and said I was {articulate} and {resourceful}. Her reaction showed that honesty can be as valuable as a perfect answer."
+    ]
+  },
+  {
+    id: "story-9",
+    tabTitle: "09. REUNION",
+    title: "The Reunion at the Old Gate",
+    author: "LINA // PERSONAL ESSAY",
+    tag: "EMOTION",
+    readTime: "1 MIN READ",
+    prompt: "Write 1 sentence using 'nostalgia', 'jubilant', or 'sentimental'.",
+    paragraphs: [
+      "I met my childhood friend at the old school gate after five years apart. The {nostalgia} hit me immediately, and we talked about the games we used to play there.",
+      "When we found our old photo in a box, we both became {sentimental}. We laughed, and then we were {jubilant} about meeting again."
+    ]
+  },
+  {
+    id: "story-10",
+    tabTitle: "10. TEAM DILEMMA",
+    title: "Two Ideas, One Presentation",
+    author: "ARIEL // TEAMWORK",
+    tag: "TEAMWORK",
+    readTime: "1 MIN READ",
+    prompt: "Write 1 sentence using 'diplomatic', 'empathetic', or 'pragmatic'.",
+    paragraphs: [
+      "Two of my teammates wanted different designs for our presentation. One wanted bold colors, and the other wanted a simple layout. I stayed {diplomatic} and asked each of them to explain their reasons.",
+      "After listening carefully, I suggested a {pragmatic} plan: keep the simple layout and use bold colors only for the title. Both of them agreed, and the final slides looked great."
+    ]
+  },
 ];
 
 // 6. Quiz Decks (4 Crisp Options A-D per Question)
@@ -3058,10 +3349,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   safeInit("words", () => { renderVocabGrid(); setupVocabFilters(); });
   safeInit("units", () => { renderUnitsLab(); setupUnitControls(); });
   safeInit("idioms", () => { renderIdiomsAndUpgrades(); setupIdiomFilters(); });
-  safeInit("stories", () => { renderStories(); setupStoryControls(); });
   safeInit("quiz", () => { renderQuizQuestion(); setupQuizControls(); });
   safeInit("modal", () => setupModalControls());
   safeInit("scroll reveal", () => refreshScrollReveal());
+  safeInit("style", () => setupStyleToggle());
+  safeInit("copy prompt", () => setupCopyPrompt());
   safeInit("progress", () => updateProgressStats());
 });
 
@@ -3167,18 +3459,24 @@ function renderSpotlightWord() {
   document.getElementById("spotlightIpa").textContent = item.ipa;
   document.getElementById("spotlightWord").textContent = item.word.toUpperCase();
   document.getElementById("spotlightDef").textContent = item.definition;
+  document.getElementById("spotlightExample").textContent = `"${item.example}"`;
   playAnim(document.getElementById("spotlightWord"), "slide-in");
   document.getElementById("spotlightOld").innerHTML = `${ICONS.cross} <span>BASIC: "${item.basicAlt}"</span>`;
   document.getElementById("spotlightNew").innerHTML = `${ICONS.check} <span>UPGRADE: "${item.example}"</span>`;
 }
 
 function setupSpotlightControls() {
+  state.spotlightIndex = Math.floor(Math.random() * VOCAB_DATA.length);
   renderSpotlightWord();
   document.getElementById("spotlightSpeakBtn").addEventListener("click", () => {
     speakText(VOCAB_DATA[state.spotlightIndex].word);
   });
   document.getElementById("spotlightShuffleBtn").addEventListener("click", () => {
-    state.spotlightIndex = (state.spotlightIndex + 1) % VOCAB_DATA.length;
+    let nextIndex = state.spotlightIndex;
+    while (nextIndex === state.spotlightIndex && VOCAB_DATA.length > 1) {
+      nextIndex = Math.floor(Math.random() * VOCAB_DATA.length);
+    }
+    state.spotlightIndex = nextIndex;
     renderSpotlightWord();
   });
 }
@@ -3216,7 +3514,6 @@ function navigateTo(pageId) {
   });
 
   if (pageId === "profile") renderProfile();
-  if (pageId === "stories") markStoryRead(STORIES_DATA[state.activeStoryIndex].id);
   window.scrollTo({ top: 0, behavior: "smooth" });
   refreshScrollReveal();
 }
@@ -3272,7 +3569,49 @@ function findVoice(lang) {
   );
 }
 
+// Prepared audio (audio/<word>.mp3) gives the same voice on every device.
+// If a file is missing or cannot play, the device voice is used instead.
+const AUDIO_DIR = "audio/";
+let currentAudio = null;
+
+function audioSlug(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
+}
+
 function speakText(text, onEndCallback = null) {
+  if (!AUDIO_FILES_ENABLED) {
+    speakWithSystemVoice(text, onEndCallback);
+    return;
+  }
+  const slug = audioSlug(text);
+  if (!slug || typeof Audio === "undefined") {
+    speakWithSystemVoice(text, onEndCallback);
+    return;
+  }
+  stopAudioFile();
+  const audio = new Audio(`${AUDIO_DIR}${slug}.mp3`);
+  currentAudio = audio;
+  const fallback = () => {
+    if (currentAudio === audio) currentAudio = null;
+    speakWithSystemVoice(text, onEndCallback);
+  };
+  audio.onended = () => {
+    if (currentAudio === audio) currentAudio = null;
+    if (onEndCallback) onEndCallback();
+  };
+  audio.onerror = fallback;
+  const playing = audio.play();
+  if (playing && typeof playing.catch === "function") playing.catch(fallback);
+}
+
+function stopAudioFile() {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+}
+
+function speakWithSystemVoice(text, onEndCallback = null) {
   if (!("speechSynthesis" in window)) {
     showToast("AUDIO NOT SUPPORTED");
     return;
@@ -3293,6 +3632,7 @@ function speakText(text, onEndCallback = null) {
 }
 
 function stopSpeech() {
+  stopAudioFile();
   if ("speechSynthesis" in window) window.speechSynthesis.cancel();
   state.isReadingStory = false;
   const readBtn = document.getElementById("readStoryAloudBtn");
@@ -3831,6 +4171,7 @@ function selectStory(index) {
   stopSpeech();
   state.activeStoryIndex = index;
   renderStories();
+  playAnim(document.querySelector(".story-window"), "slide-in");
 }
 
 function setupStoryControls() {
@@ -4146,9 +4487,9 @@ function showToast(message) {
 // ==========================================================================
 const SUPABASE_URL = "https://pbvlcjlgxbxpxmzzcigf.supabase.co";
 const SUPABASE_KEY = "sb_publishable_uV4Wc5Pe2IJdGvlxJZCwBg_4iIsLspV";
-// Set to true only after the Google provider is enabled in Supabase (Authentication > Providers > Google)
-const GOOGLE_LOGIN_ENABLED = false;
-const sb = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+const USE_CLOUD_ACCOUNTS = false;   // local version: no Supabase, no email
+const AUDIO_FILES_ENABLED = false; // local version: device voice only
+const sb = window.supabase && USE_CLOUD_ACCOUNTS ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
 
 let authUser = null;     // Supabase auth user (id, email)
 let profile = null;      // row from public.profiles (name, avatar_url, created_at)
@@ -4218,6 +4559,10 @@ function scheduleProgressSave() {
 }
 
 async function saveProgressNow() {
+  if (!USE_CLOUD_ACCOUNTS) {
+    if (authUser && progressCache) localStorage.setItem(`bb_${authUser.id}_progress`, JSON.stringify(progressCache));
+    return;
+  }
   if (!sb || !authUser || !progressCache) return;
   const { error } = await sb.from("progress").upsert({
     user_id: authUser.id,
@@ -4263,6 +4608,26 @@ function currentStreak(activity) {
   return streak;
 }
 
+function updateLocalUser(fields) {
+  const users = DB.load("bb_users", []);
+  const u = users.find((x) => x.id === authUser.id);
+  if (!u) return false;
+  if (fields.name !== undefined) u.name = fields.name;
+  if (fields.avatar_url !== undefined) u.avatar = fields.avatar_url;
+  try {
+    localStorage.setItem("bb_users", JSON.stringify(users));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+async function saveProfileFields(fields) {
+  if (!USE_CLOUD_ACCOUNTS) return updateLocalUser(fields) ? null : new Error("Could not save");
+  const { error } = await sb.from("profiles").update(fields).eq("id", authUser.id);
+  return error;
+}
+
 function renderNavAvatar() {
   const chip = document.getElementById("navProfileBtn");
   const user = currentUser();
@@ -4282,7 +4647,28 @@ function setLoggedOut(message = "") {
   navigateTo("login");
 }
 
+function bootLocal() {
+  const id = DB.load("bb_session", null);
+  const user = id ? DB.load("bb_users", []).find((u) => u.id === id) : null;
+  if (!user) {
+    setLoggedOut();
+    return;
+  }
+  authUser = { id: user.id, email: user.email };
+  profile = { name: user.name, avatar_url: user.avatar || null, created_at: user.createdAt };
+  const saved = DB.load(`bb_${user.id}_progress`, {});
+  progressCache = { ...EMPTY_PROGRESS(), ...saved, notes: { ...(saved.notes || {}) } };
+  state.masteredIds = progressCache.mastered.slice();
+  document.body.classList.remove("logged-out");
+  renderNavAvatar();
+  navigateTo("home");
+}
+
 async function bootApp() {
+  if (!USE_CLOUD_ACCOUNTS) {
+    bootLocal();
+    return;
+  }
   if (!sb) {
     setLoggedOut("Could not load the sign-in service. Check your connection and refresh.");
     return;
@@ -4379,6 +4765,20 @@ async function handleLoginSubmit(e) {
     err.textContent = "Please enter a valid email address.";
     return;
   }
+  if (!USE_CLOUD_ACCOUNTS) {
+    const users = DB.load("bb_users", []);
+    let user = users.find((u) => u.email.toLowerCase() === email.toLowerCase());
+    if (user) {
+      user.name = name;
+    } else {
+      user = { id: `u${Date.now().toString(36)}`, name, email, avatar: null, createdAt: new Date().toISOString() };
+      users.push(user);
+    }
+    localStorage.setItem("bb_users", JSON.stringify(users));
+    localStorage.setItem("bb_session", JSON.stringify(user.id));
+    location.reload();
+    return;
+  }
   if (!sb) {
     err.textContent = "Could not connect to the sign-in service.";
     return;
@@ -4401,14 +4801,18 @@ async function handleLoginSubmit(e) {
   btn.textContent = "SEND SIGN-IN LINK →";
 
   if (error) {
-    err.textContent = error.message;
+    const rateLimited = /rate|too many|over_email_send/i.test(`${error.code || ""} ${error.message || ""}`);
+    err.textContent = rateLimited
+      ? "Too many sign-in emails were sent recently. Please wait about an hour and try again."
+      : error.message;
     return;
   }
-  msg.textContent = `Link sent to ${email}. Open it on this device to continue.`;
+  msg.textContent = `Link sent to ${email}. Open it in this same browser to sign in.`;
 }
 
 async function signOutAndReload() {
-  if (sb) await sb.auth.signOut();
+  if (USE_CLOUD_ACCOUNTS && sb) await sb.auth.signOut();
+  else localStorage.removeItem("bb_session");
   location.reload();
 }
 
@@ -4437,11 +4841,11 @@ function renderProfile() {
   const unitBars = UNITS_DATA.map((u) => {
     const key = String(u.unit).padStart(2, "0");
     const pct = p.bestByUnit[key] || 0;
-    const color = u.exam === "MIDTERM" ? "bg-sky" : "bg-coral";
+    const color = u.exam === "MIDTERM" ? "var(--exam-mid)" : "var(--exam-fin)";
     return `
       <div class="pf-bar-col" title="Unit ${key}: best ${pct}%">
         <span class="pf-bar-val">${pct}%</span>
-        <div class="pf-bar-track"><div class="pf-bar-fill ${color}" style="height:${pct}%"></div></div>
+        <div class="pf-bar-track"><div class="pf-bar-fill" style="height:${pct}%;background:${color}"></div></div>
         <span class="pf-bar-label">${key}</span>
       </div>`;
   }).join("");
@@ -4478,6 +4882,14 @@ function renderProfile() {
       <li><span>${r.date}</span><span>${r.label}</span><strong>${r.score}/${r.total} · ${r.pct}%</strong></li>`).join("")
     || `<li class="pf-empty">No quiz attempts yet. Try a quick quiz!</li>`;
 
+  const progressBars = buildProgressBars([
+    ["UNITS PRACTICED", `${p.practiced.length}/${UNITS_DATA.length}`, UNITS_DATA.length, Math.round((p.practiced.length / UNITS_DATA.length) * 100), "var(--chart-1)"],
+    ["VOCABULARY MASTERED", `${masteredWords}/${VOCAB_DATA.length}`, VOCAB_DATA.length, wordPct, "var(--chart-3)"],
+    ["QUIZ AVERAGE", avg === null ? "-" : `${avg}%`, 100, avg === null ? 0 : avg, "var(--chart-4)"],
+  ]);
+  const trendSvg = buildScoreTrend(p.quizResults);
+  const modeBars = buildModeBars(p.quizResults);
+
   const avatar = user.avatar
     ? `<img src="${user.avatar}" alt="Your profile photo" />`
     : `<span>${escAttr((user.name || "?").trim().charAt(0).toUpperCase())}</span>`;
@@ -4505,14 +4917,13 @@ function renderProfile() {
       ${statCard("QUIZ AVERAGE", avg === null ? "-" : `${avg}%`, "bg-yellow")}
       ${statCard("QUIZ ATTEMPTS", p.quizResults.length, "bg-sky")}
       ${statCard("UNITS PRACTICED", `${p.practiced.length}/${UNITS_DATA.length}`, "bg-coral")}
-      ${statCard("STORIES READ", `${p.storiesRead.length}/${STORIES_DATA.length}`, "bg-lilac")}
       ${statCard("DAY STREAK", streak, "bg-peach")}
     </div>
 
     <div class="pf-panel">
       <div class="pf-panel-title">BEST QUIZ SCORE PER UNIT</div>
       <div class="pf-bars">${unitBars}</div>
-      <div class="pf-legend"><span class="tag-pill bg-sky">MIDTERM</span><span class="tag-pill bg-coral">FINAL</span></div>
+      <div class="pf-legend"><span class="pf-legend-item"><i class="pf-swatch" style="background:var(--exam-mid)"></i>MIDTERM</span><span class="pf-legend-item"><i class="pf-swatch" style="background:var(--exam-fin)"></i>FINAL</span></div>
     </div>
 
     <div class="pf-grid-2">
@@ -4532,6 +4943,22 @@ function renderProfile() {
       </div>
     </div>
 
+    <div class="pf-grid-2">
+      <div class="pf-panel pf-chart-lg">
+        <div class="pf-panel-title">PROGRESS OVERVIEW</div>
+        ${progressBars}
+      </div>
+      <div class="pf-panel pf-chart-lg">
+        <div class="pf-panel-title">QUIZ SCORES BY TYPE</div>
+        ${modeBars}
+      </div>
+    </div>
+
+    <div class="pf-panel pf-chart-lg">
+      <div class="pf-panel-title">SCORE TREND · LAST 10 QUIZZES</div>
+      ${trendSvg}
+    </div>
+
     <div class="pf-panel">
       <div class="pf-panel-title">RECENT QUIZ ATTEMPTS</div>
       <ul class="pf-list">${recent}</ul>
@@ -4540,23 +4967,6 @@ function renderProfile() {
 
 function setupProfile() {
   document.getElementById("loginForm").addEventListener("submit", handleLoginSubmit);
-  if (!GOOGLE_LOGIN_ENABLED) {
-    document.getElementById("googleLoginBtn").style.display = "none";
-    document.getElementById("loginDivider").style.display = "none";
-  }
-  document.getElementById("googleLoginBtn").addEventListener("click", async () => {
-    const err = document.getElementById("loginError");
-    if (!sb) {
-      err.textContent = "Could not connect to the sign-in service.";
-      return;
-    }
-    err.textContent = "";
-    const { error } = await sb.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: window.location.origin + window.location.pathname },
-    });
-    if (error) err.textContent = error.message;
-  });
 
   document.getElementById("avatarInput").addEventListener("change", (e) => {
     const file = e.target.files && e.target.files[0];
@@ -4578,6 +4988,20 @@ function setupProfile() {
         const sx = (img.width - side) / 2;
         const sy = (img.height - side) / 2;
         canvas.getContext("2d").drawImage(img, sx, sy, side, side, 0, 0, size, size);
+        if (!USE_CLOUD_ACCOUNTS) {
+          const dataUrl = canvas.toDataURL("image/jpeg", 0.85);
+          saveProfileFields({ avatar_url: dataUrl }).then((err) => {
+            if (err) {
+              showToast("PHOTO SAVE FAILED: STORAGE FULL?");
+              return;
+            }
+            profile.avatar_url = dataUrl;
+            renderProfile();
+            renderNavAvatar();
+            showToast("PHOTO SAVED");
+          });
+          return;
+        }
         canvas.toBlob(async (blob) => {
           if (!blob) {
             showToast("COULD NOT PROCESS IMAGE");
@@ -4594,7 +5018,7 @@ function setupProfile() {
           }
           const { data: pub } = sb.storage.from("avatars").getPublicUrl(path);
           const url = `${pub.publicUrl}?v=${Date.now()}`;
-          const { error } = await sb.from("profiles").update({ avatar_url: url }).eq("id", authUser.id);
+          const error = await saveProfileFields({ avatar_url: url });
           if (error) {
             showToast("PHOTO SAVE FAILED");
             return;
@@ -4624,7 +5048,7 @@ function setupProfile() {
       showToast("NAME MUST BE AT LEAST 2 CHARACTERS");
       return;
     }
-    const { error } = await sb.from("profiles").update({ name }).eq("id", authUser.id);
+    const error = await saveProfileFields({ name });
     if (error) {
       showToast("NAME SAVE FAILED");
       return;
@@ -4636,4 +5060,78 @@ function setupProfile() {
   });
 
   renderNavAvatar();
+}
+
+
+// ---------- Dashboard charts ----------
+function buildScoreTrend(results) {
+  const pts = results.slice(0, 10).reverse();
+  if (pts.length === 0) {
+    return `<p class="pf-empty-chart">Take a quiz to see your score trend here.</p>`;
+  }
+  const W = 600, H = 230, padL = 40, padR = 20, padT = 18, padB = 30;
+  const innerW = W - padL - padR, innerH = H - padT - padB;
+  const x = (i) => (pts.length === 1 ? padL + innerW / 2 : padL + (i * innerW) / (pts.length - 1));
+  const y = (pct) => padT + innerH - (pct / 100) * innerH;
+  const grid = [0, 50, 100].map((v) =>
+    `<line class="pf-grid-line" x1="${padL}" x2="${W - padR}" y1="${y(v)}" y2="${y(v)}"></line>` +
+    `<text class="pf-axis" x="${padL - 8}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`
+  ).join("");
+  const line = pts.length > 1
+    ? `<polyline class="pf-trend-line" points="${pts.map((r, i) => `${x(i)},${y(r.pct)}`).join(" ")}"></polyline>`
+    : "";
+  const dots = pts.map((r, i) =>
+    `<circle class="pf-trend-dot" cx="${x(i)}" cy="${y(r.pct)}" r="7"><title>${escAttr(r.label)}: ${r.pct}%</title></circle>`
+  ).join("");
+  const labels = pts.map((r, i) =>
+    `<text class="pf-axis" x="${x(i)}" y="${H - 8}" text-anchor="middle">${i + 1}</text>`
+  ).join("");
+  return `<svg class="pf-trend" viewBox="0 0 ${W} ${H}" role="img" aria-label="Quiz score trend">${grid}${line}${dots}${labels}</svg>`;
+}
+
+function buildModeBars(results) {
+  const groups = [
+    ["UNITS", (r) => /^UNIT/.test(r.label)],
+    ["WORDS", (r) => r.label === "WORDS"],
+    ["IDIOMS", (r) => r.label === "IDIOMS"],
+  ];
+  return groups.map(([name, test], i) => {
+    const items = results.filter(test);
+    const avg = items.length ? Math.round(items.reduce((sum, r) => sum + r.pct, 0) / items.length) : 0;
+    return `
+      <div class="pf-hbar">
+        <div class="pf-hbar-head"><span>${name}</span><span>${items.length} TRIES · AVG ${avg}%</span></div>
+        <div class="pf-hbar-track"><div class="pf-hbar-fill" style="width:${avg}%;background:var(--chart-${i + 1})"></div></div>
+      </div>`;
+  }).join("");
+}
+
+function buildProgressBars(items) {
+  return items.map(([label, value, total, pct, color]) => `
+      <div class="pf-hbar">
+        <div class="pf-hbar-head"><span>${label}</span><span>${value}</span></div>
+        <div class="pf-hbar-track"><div class="pf-hbar-fill" style="width:${pct}%;background:${color}"></div></div>
+      </div>`).join("");
+}
+
+
+// Copy the ChatGPT prompt from the AI tutorials
+function setupCopyPrompt() {
+  const btn = document.getElementById("copyPromptBtn");
+  if (!btn) return;
+  btn.addEventListener("click", async () => {
+    const text = document.getElementById("promptText").textContent;
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast("PROMPT COPIED");
+    } catch (e) {
+      const area = document.createElement("textarea");
+      area.value = text;
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand("copy");
+      area.remove();
+      showToast("PROMPT COPIED");
+    }
+  });
 }

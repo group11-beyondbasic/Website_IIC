@@ -1,0 +1,261 @@
+/* ==========================================================================
+   BOLD STYLE (optional): stronger neo-brutalism, loaded only when chosen.
+   Inspired by bold neo-brutalist layouts: heavy type, thick outlines,
+   hard shadows, visible grid, solid accent colours.
+   ========================================================================== */
+
+:root {
+  --bold-lime: #c9f75a;
+  --bold-purple: #b8a4ff;
+  --bold-orange: #ff7a1a;
+  --bold-pink: #ffb3c7;
+}
+
+:root[data-theme="dark"],
+:root:not([data-theme="light"]) {
+  --bold-line: #f2f2f2;
+}
+:root[data-theme="light"],
+:root { --bold-line: #111111; }
+
+/* Visible grid, like the reference */
+:root { --dot-color: rgba(0, 0, 0, 0.14); }
+:root[data-theme="dark"] { --dot-color: rgba(255, 255, 255, 0.12); }
+
+body {
+  background-size: 28px 28px;
+  letter-spacing: 0;
+}
+
+/* Heavy, tight headings */
+h1, h2, h3,
+.page-headline,
+.auth-title,
+.home-section-heading,
+.wotd-display,
+.mega-headline {
+  font-weight: 900 !important;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+/* Thick outlines and hard shadows */
+.os-window,
+.vocab-card,
+.unit-mini-card,
+.subtopic-card,
+.dialogue-box,
+.reflection-panel,
+.pf-panel,
+.pf-stat,
+.pf-header,
+.read-first,
+.auth-card,
+.poster-block,
+.wotd-window {
+  border: 3px solid var(--bold-line) !important;
+  box-shadow: 6px 6px 0 var(--bold-line) !important;
+  border-radius: 6px;
+}
+
+/* Buttons: chunky, press down on hover */
+.brutal-btn,
+.brutal-btn-sm {
+  border: 3px solid var(--bold-line) !important;
+  box-shadow: 4px 4px 0 var(--bold-line) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.brutal-btn:hover,
+.brutal-btn-sm:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--bold-line) !important;
+}
+.brutal-btn:active,
+.brutal-btn-sm:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--bold-line) !important;
+}
+
+/* Pills: solid, uppercase, bold */
+.tag-pill {
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  border: 2.5px solid var(--bold-line);
+  letter-spacing: 0.04em;
+}
+
+/* Accent colours back on for the bold style */
+.unit-mini-card .unit-num,
+.vocab-card .tag-pill,
+.subtopic-card .tag-pill,
+.pf-stat .tag-pill,
+.wotd-window .tag-pill,
+.read-first .tag-pill,
+.page-top-banner .tag-pill {
+  background: var(--bold-lime) !important;
+  color: #111 !important;
+}
+.exam-group-head .tag-pill.bg-sky { background: var(--bold-purple) !important; color: #111 !important; }
+.exam-group-head .tag-pill.bg-coral { background: var(--bold-orange) !important; color: #111 !important; }
+
+.brutal-btn.bg-sky,
+.brutal-btn-sm.bg-sky { background: var(--bold-purple) !important; color: #111 !important; }
+.brutal-btn.bg-mint,
+.brutal-btn-sm.bg-mint { background: var(--bold-lime) !important; color: #111 !important; }
+.brutal-btn.bg-coral,
+.brutal-btn-sm.bg-coral { background: var(--bold-orange) !important; color: #111 !important; }
+.brutal-btn.bg-yellow { background: var(--bold-lime) !important; color: #111 !important; }
+
+/* Title bars get colour again, like the reference */
+.wotd-window .os-titlebar,
+.quiz-window .os-titlebar,
+.unit-workspace-window .os-titlebar {
+  background: var(--bold-purple) !important;
+  color: #111 !important;
+  border-bottom: 3px solid var(--bold-line);
+}
+
+/* Navigation: heavier active state */
+.nav-tab.active,
+.dock-btn.active {
+  border: 3px solid var(--bold-line) !important;
+  box-shadow: 4px 4px 0 var(--bold-line);
+  font-weight: 900;
+}
+
+/* Grid cards line up cleanly */
+.units-overview-grid { gap: 18px; }
+
+/* Mobile: keep the bold lines but a little lighter so text stays easy to read */
+@media (max-width: 599px) {
+  .os-window,
+  .vocab-card,
+  .unit-mini-card,
+  .pf-panel,
+  .pf-stat { box-shadow: 4px 4px 0 var(--bold-line) !important; border-width: 2.5px !important; }
+  h1, h2, .page-headline { letter-spacing: -0.025em; }
+}
+
+/* ==========================================================================
+   BOLD DECORATIONS: solid colours, thicker lines and a slow spin.
+   Positions and sizes come from style.css.
+   ========================================================================== */
+.deco svg path,
+.deco svg polyline,
+.deco svg circle {
+  stroke: var(--bold-line);
+  stroke-width: 3.5;
+}
+.deco-star svg path { fill: var(--bold-purple); }
+.deco-star-login svg path { fill: var(--bold-lime); }
+.deco-dots svg circle:first-child { fill: var(--bold-lime); }
+.deco-dots svg .fill-dots { fill: var(--bold-pink); }
+.deco-dots svg circle:last-child { fill: var(--bold-line); }
+
+:root {
+  --exam-mid: var(--bold-purple);
+  --exam-fin: var(--bold-orange);
+  --chart-1: var(--bold-purple);
+  --chart-2: var(--bold-lime);
+  --chart-3: var(--bold-pink);
+  --chart-4: var(--bold-orange);
+}
+.pf-trend-line { stroke: var(--bold-line); stroke-width: 4; }
+.pf-trend-dot { stroke: var(--bold-line); stroke-width: 3; }
+.pf-swatch { border-color: var(--bold-line); border-width: 2.5px; }
+.deco-star-hero { animation: boldSpin 9s linear infinite; }
+@keyframes boldSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .deco-star-hero { animation: none; } }
+
+/* ==========================================================================
+   HOMEPAGE ORNAMENTS: wave, plus, arrow and zigzag shapes (BOLD only).
+   Shapes use CSS masks, so their colour follows the theme.
+   ========================================================================== */
+.ornament-wave,
+.ornament-plus,
+.ornament-arrow,
+.ornament-zig { display: block; }
+
+/* Wave under the section headings */
+#page-home .home-section-heading { position: relative; padding-bottom: 20px; }
+#page-home .home-section-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 14px;
+  background: var(--bold-orange);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 16'><path d='M0 8 Q 15 0 30 8 T 60 8 T 90 8 T 120 8' fill='none' stroke='black' stroke-width='3.5'/></svg>") no-repeat left center / contain;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 16'><path d='M0 8 Q 15 0 30 8 T 60 8 T 90 8 T 120 8' fill='none' stroke='black' stroke-width='3.5'/></svg>") no-repeat left center / contain;
+  pointer-events: none;
+}
+
+/* Plus sign on the quote strip corner */
+#page-home .quote-banner-wrap { position: relative; }
+#page-home .quote-banner-wrap::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 30px;
+  height: 30px;
+  background: var(--bold-pink);
+  border: 2.5px solid var(--bold-line);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Small plus in the corner of each unit card */
+#page-home .unit-mini-card { position: relative; }
+#page-home .unit-mini-card::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 16px;
+  height: 16px;
+  background: var(--bold-line);
+  opacity: 0.55;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M8 1 V15 M1 8 H15' stroke='black' stroke-width='3'/></svg>") no-repeat center / contain;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M8 1 V15 M1 8 H15' stroke='black' stroke-width='3'/></svg>") no-repeat center / contain;
+  pointer-events: none;
+}
+
+/* Hand-drawn arrow after the MIDTERM / FINAL headings */
+#page-home .exam-group-head { position: relative; }
+#page-home .exam-group-head::after {
+  content: "";
+  flex: 0 0 90px;
+  height: 16px;
+  margin-left: 6px;
+  background: var(--bold-line);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 16'><path d='M2 8 Q 30 3 70 8 M60 2 L72 8 L60 14' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat left center / contain;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 16'><path d='M2 8 Q 30 3 70 8 M60 2 L72 8 L60 14' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat left center / contain;
+  pointer-events: none;
+}
+
+/* Zigzag edge along the top of the footer */
+.site-footer { position: relative; }
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: var(--bold-line);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 14'><path d='M0 12 L10 2 L20 12 L30 2 L40 12' fill='none' stroke='black' stroke-width='3'/></svg>") repeat-x left center / 40px 14px;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 14'><path d='M0 12 L10 2 L20 12 L30 2 L40 12' fill='none' stroke='black' stroke-width='3'/></svg>") repeat-x left center / 40px 14px;
+  pointer-events: none;
+}
+
+/* Smaller ornaments on phones */
+@media (max-width: 599px) {
+  #page-home .home-section-heading::after { width: 110px; height: 11px; }
+  #page-home .quote-banner-wrap::after { width: 24px; height: 24px; top: -10px; right: -8px; }
+  #page-home .exam-group-head::after { flex-basis: 60px; height: 12px; }
+}
