@@ -259,3 +259,67 @@ h1, h2, h3,
   #page-home .quote-banner-wrap::after { width: 24px; height: 24px; top: -10px; right: -8px; }
   #page-home .exam-group-head::after { flex-basis: 60px; height: 12px; }
 }
+
+/* ==========================================================================
+   MORE NEO-BRUTALIST ORNAMENTS (BOLD only): starbursts and an arrow block.
+   Placed in empty corners so they never cover text.
+   ========================================================================== */
+
+/* Starburst in the top-right corner of every tip card, alternating colours */
+.tip-card { position: relative; }
+.tip-card::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  right: -12px;
+  width: 44px;
+  height: 44px;
+  background: var(--bold-purple);
+  border: 3px solid var(--bold-line);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 2 L61 34 L94 22 L76 50 L94 78 L61 66 L50 98 L39 66 L6 78 L24 50 L6 22 L39 34 Z' fill='black'/></svg>") no-repeat center / contain;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 2 L61 34 L94 22 L76 50 L94 78 L61 66 L50 98 L39 66 L6 78 L24 50 L6 22 L39 34 Z' fill='black'/></svg>") no-repeat center / contain;
+  pointer-events: none;
+  z-index: 1;
+}
+.tip-card:nth-child(even)::after { background: var(--bold-lime); }
+
+/* Small blue starburst in the top-left corner of the quote strip */
+#page-home .quote-banner-wrap::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 30px;
+  height: 30px;
+  background: #7b5cff;
+  border: 2.5px solid var(--bold-line);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 2 L61 34 L94 22 L76 50 L94 78 L61 66 L50 98 L39 66 L6 78 L24 50 L6 22 L39 34 Z' fill='black'/></svg>") no-repeat center / contain;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 2 L61 34 L94 22 L76 50 L94 78 L61 66 L50 98 L39 66 L6 78 L24 50 L6 22 L39 34 Z' fill='black'/></svg>") no-repeat center / contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Orange offset block with an arrow at the hero card's bottom-right corner (like the reference).
+   It sits in the gap beside the Word Spotlight, so it never covers text. */
+#page-home .poster-block::after {
+  content: "\2192";
+  position: absolute;
+  right: -14px;
+  bottom: -18px;
+  width: 46px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bold-orange);
+  border: 3px solid var(--bold-line);
+  box-shadow: 5px 5px 0 var(--bold-line);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--bold-line);
+  pointer-events: none;
+  z-index: 2;
+}
+@media (max-width: 599px) {
+  #page-home .poster-block::after { right: -8px; bottom: -14px; width: 40px; height: 36px; font-size: 19px; }
+}
